@@ -1,0 +1,11 @@
+477b4f420553e8a52c2fbccc464d7561b239c443
+# 上面这一行是 fork point。本仓库从它分叉，之后 jydraft/ 之外的内容必须与它一致。
+#
+# 来源：deepseek-harness 的 rel/dsh-0.1.7-rc.2 发布合并
+#   git log -1 477b4f420553e8a52c2fbccc464d7561b239c443
+#   → 477b4f4205 2026-09-24 Merge pull request #5180 from deepseek-harness/rel/dsh-0.1.7-rc.2
+#
+# 检查隔离是否完好：
+#   node jydraft/scripts/check-isolation.mjs
+#
+# 不要手改第一行。换基线时按 jydraft/docs/01-上游隔离策略.md 的「换基线」一节做。

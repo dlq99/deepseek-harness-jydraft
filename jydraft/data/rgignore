@@ -1,0 +1,60 @@
+# 由 jydraft/scripts/attention-map.mjs 生成 —— 搜索时跳过的噪声区
+#
+# 用法（不要改仓库根的 .rgignore，那会破坏隔离）：
+#   rg --ignore-file jydraft/data/rgignore <pattern>
+# 或设一次环境变量，之后所有 rg 调用自动生效：
+#   export RIPGREP_CONFIG_PATH=jydraft/data/rgignore
+
+# 与产品运行无关的顶层目录
+/benchmarks/
+/website/
+/python/
+/native/
+/snapshots/
+/.github/
+/patches/
+
+# 整组不参与产品挂载
+/packages/test-support/
+/packages/experimental/
+
+# 未被任何 profile 加载的包（要用时单独搜那个目录）
+/packages/acp/acp/
+/packages/bundle/acp-app/
+/packages/browser-use/browser-use/
+/packages/client/store/
+/packages/client/ui-dockkit/
+/packages/client/ui-primitives/
+/packages/client/web/
+/packages/computer-use/computer-use/
+/packages/ssh/fs-ssh/
+/packages/hooks/hook-protocol/
+/packages/hooks/hooks-claude-code/
+/packages/hooks/hooks-codex/
+/packages/host/product-telemetry-otel/
+/packages/lsp/lsp/
+/packages/lsp/lsp-stdio/
+/packages/ssh/sandbox-ssh/
+/packages/sdk/client/
+/packages/bundle/sdk-minimal/
+/packages/session/session-title-all-prompts-llm/
+/packages/ssh/ssh/
+/packages/storage/storage-sqlite/
+/packages/subagent/subagent-acp/
+/packages/subagent/subagent-claude-code/
+/packages/subagent/subagent-codex/
+/packages/subagent/subagent-dsh-sdk/
+/packages/ssh/subprocess-ssh/
+/packages/context/tmux-context/
+/packages/lsp/tool-lsp/
+/packages/session-query/tool-session-query/
+/packages/fs/tool-str-replace-editor/
+/packages/terminal/tool-terminal/
+/packages/typert/generator/
+/packages/web/web-search-exa/
+/packages/web/web-search-perplexity/
+/packages/webhook/webhook/
+/packages/webhook/webhook-github/
+
+# 归档的 agent notes（冻结的历史，不是当前依据）
+/.agents/notes/archived/
