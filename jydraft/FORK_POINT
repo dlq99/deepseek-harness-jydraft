@@ -1,11 +1,16 @@
-477b4f420553e8a52c2fbccc464d7561b239c443
-# 上面这一行是 fork point。本仓库从它分叉，之后 jydraft/ 之外的内容必须与它一致。
+1614337a0ebb7bab855f0afdb8c96b7754d09e65
+# 上面这一行是**基线提交**（本仓库的 root commit）。它的 tree 与上游逐字节一致。
 #
-# 来源：deepseek-harness 的 rel/dsh-0.1.7-rc.2 发布合并
-#   git log -1 477b4f420553e8a52c2fbccc464d7561b239c443
-#   → 477b4f4205 2026-09-24 Merge pull request #5180 from deepseek-harness/rel/dsh-0.1.7-rc.2
+# 上游来源（本仓库已不保留其历史，需要时按 jydraft/docs/01-上游隔离策略.md 拉取）：
+#   DeepSeek Harness  477b4f420553e8a52c2fbccc464d7561b239c443
+#   git log -1 477b4f420553  →  2026-09-24 Merge pull request #5180 from deepseek-harness/rel/dsh-0.1.7-rc.2
+#
+# 基线的可验证指纹（不需要上游历史就能核）：
+#   tree e3e63253d1d35ad07f785273235c40813cb6c8bd
+#
+# 验证：
+#   git rev-parse HEAD~1^{tree}        # 或 git rev-parse <基线>^{tree}
+#   应输出 e3e63253d1d35ad07f785273235c40813cb6c8bd
 #
 # 检查隔离是否完好：
 #   node jydraft/scripts/check-isolation.mjs
-#
-# 不要手改第一行。换基线时按 jydraft/docs/01-上游隔离策略.md 的「换基线」一节做。
